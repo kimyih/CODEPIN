@@ -156,27 +156,6 @@ body {
     background-color: var(--pointGreen);
 }
 
-#main .code_btn .code {
-    width: 50px;
-    height: 20px;
-    background-color: var(--pointColor1-1);
-    border-radius: 20%;
-}
-
-#main .code_btn .border {
-    width: 50px;
-    height: 20px;
-    background-color: var(--white);
-    border-radius: 20%;
-}
-
-#main .code_btn .pide {
-    width: 50px;
-    height: 20px;
-    background-color: var(--white);
-    border-radius: 20%;
-}
-
 /* contents */
 .content {
     position: relative;
@@ -188,6 +167,33 @@ body {
     align-items: center;
     padding: 20px 0;
 }
+
+#contents .code_btn {
+    gap: 2.4rem;
+    margin-bottom: 2.8rem;
+}
+
+#contents .code_btn .code {
+    width: 50px;
+    height: 20px;
+    background-color: var(--pointColor1-1);
+    border-radius: 20%;
+}
+
+#contents .code_btn .border {
+    width: 50px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 20%;
+}
+
+#contents .code_btn .pide {
+    width: 50px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 20%;
+}
+
 
 .content_wrap {
     display: grid;

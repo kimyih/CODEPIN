@@ -2,10 +2,12 @@
     --fontN: "NanumSquareNeo";
     --fontG: "GmarketSans";
     --fontL: "lato";
+    --fontM: "Montserrat";
 
     --mainColor: #FAF6EE;
     --pointColor1: #048EC9;
     --pointColor2: #B3DEBE;
+    --pointColor3: #78E3D0;
 
     --pointColor1-1: #48ABD1;
     --pointGreen: #058A2A;
@@ -31,7 +33,7 @@
     --black700: #777;
 
     /* 기본 폰트 설정 */
-    font-family: var(--fontN);
+    font-family: var(--fontM);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
