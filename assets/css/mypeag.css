@@ -35,8 +35,8 @@ body {
 }
 
 .popup_Profile {
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
     background-color: var(--white300);
     position: absolute;
     top: 100%;
@@ -69,7 +69,6 @@ body {
 /* popup_Profile_butm */
 .popup_Profile_butm {
     padding: 20px;
-    padding-left: 30px;
 }
 
 /* mycode, setting, logout 공통 스타일 */
@@ -91,8 +90,8 @@ body {
 .popup_Profile_butm .mycode img,
 .popup_Profile_butm .setting img,
 .popup_Profile_butm .logout img {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
 }
 
 /* 닉네임 스타일 추가 */
