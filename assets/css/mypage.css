@@ -49,9 +49,13 @@ body {
     top: 4rem;
 }
 
+.popup_Profile>p {
+    margin: 0 auto;
+}
+
 /* popup_Profile_top */
 .popup_Profile_top {
-    height: 130px;
+    height: 150px;
     position: relative;
     display: flex;
     align-items: center;
@@ -62,11 +66,20 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin: 0 a;
+    margin: 0 auto;
+    margin-bottom: 16px;
 }
 
+/* 닉네임 스타일 추가 */
 .popup_Profile .popup_Profile_top>p {
-    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+    font-size: 20px;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
 
@@ -80,7 +93,15 @@ body {
 
 /* popup_Profile_butm */
 .popup_Profile_butm {
-    padding: 20px;
+    padding: 10px;
+}
+
+.setting:hover,
+.logout:hover,
+.mycode:hover {
+    background-color: #fff;
+    color: #121212;
+    border-radius: 20px;
 }
 
 /* mycode, setting, logout 공통 스타일 */
@@ -106,16 +127,6 @@ body {
 .popup_Profile_butm .logout img {
     width: 20px;
     height: 20px;
-}
-
-/* 닉네임 스타일 추가 */
-.popup_Profile .popup_Profile_top>p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 16px;
-    margin-left: 10px;
-    color: var(--black);
 }
 
 /* main */

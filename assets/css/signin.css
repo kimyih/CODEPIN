@@ -42,7 +42,7 @@ a {
     margin: 10px 0;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
@@ -74,6 +74,7 @@ a:hover{
     justify-content: center;
     text-align: center;
 }
+
 .required {
     display: flex;
     margin-bottom: 3px
@@ -81,7 +82,7 @@ a:hover{
 
 .form-container form .check {
     display: flex;
-    
+
 }
 
 .form-container form .btn {
@@ -96,9 +97,6 @@ a:hover{
     margin-left: 5px;
     cursor: pointer;
 }
-
-
-
 
 /* //social-container */
 .social-container {
