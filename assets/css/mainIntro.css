@@ -38,8 +38,6 @@
 }
 
 /* //Mypage_info */
-
-
 .Mypage_info {
     width: 100%;
     background-color: var(--white);
@@ -101,6 +99,7 @@
     color: var(--black600);
     font-size: 1rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 /* //Code_Gird */
