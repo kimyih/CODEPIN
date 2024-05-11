@@ -24,7 +24,7 @@ h1 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 100;
     line-height: 20px;
     letter-spacing: .5px;
@@ -32,14 +32,18 @@ p {
 }
 
 span {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 a {
     color: #333;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
-    margin: 15px 0;
+    margin: 10px 0;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 .container {
@@ -83,7 +87,7 @@ a {
 .form-container form .btn {
     background-color: #78E3D0;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 35%;
     text-align: center;
     display: flex;
@@ -126,13 +130,17 @@ button {
     border: 1px solid #78E3D0;
     background: #78E3D0;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
 }
 
 button:active {

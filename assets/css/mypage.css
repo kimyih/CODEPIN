@@ -24,7 +24,9 @@ body {
     margin-top: 30px;
 }
 
+/* //Profile */
 .Profile {
+    z-index: 20;
     width: 40px;
     height: 40px;
     background-color: var(--black);
@@ -37,19 +39,19 @@ body {
 .popup_Profile {
     width: 250px;
     height: 300px;
-    background-color: var(--white300);
+    background-color: #e2e2e2bd;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30px;
     display: none;
+    top: 4rem;
 }
 
 /* popup_Profile_top */
 .popup_Profile_top {
     height: 130px;
-    border-bottom: 1px solid #000;
     position: relative;
     display: flex;
     align-items: center;
@@ -60,10 +62,20 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    margin: 0 a;
 }
 
 .popup_Profile .popup_Profile_top>p {
     font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.popup_Profile__line {
+    width: 90%;
+    height: 0.1rem;
+    background-color: var(--black700);
+    opacity: .6;
+    margin: 0 auto;
 }
 
 /* popup_Profile_butm */
@@ -78,6 +90,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 0.5rem 0.5rem;
     margin-bottom: 10px;
 }
 
@@ -85,13 +98,14 @@ body {
 .popup_Profile_butm .setting p,
 .popup_Profile_butm .logout p {
     font-size: 1rem;
+    font-weight: 600;
 }
 
 .popup_Profile_butm .mycode img,
 .popup_Profile_butm .setting img,
 .popup_Profile_butm .logout img {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 }
 
 /* 닉네임 스타일 추가 */
