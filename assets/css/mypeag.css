@@ -9,10 +9,12 @@ body {
     width: 100%;
     height: 64px;
     position: relative;
+    /* 이미 존재 */
     background-color: var(--white);
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 1;
 }
 
 .logo {
@@ -29,17 +31,78 @@ body {
     background-image: url(../img/974e19416242ccb6755ce5e4878d4988.jpg);
     border-radius: 50%;
     margin-left: auto;
-    margin-right: 50px;
-    display: none;
+    margin-right: 150px;
+    position: relative;
 }
 
-.Profile {
-    width: 40px;
-    height: 40px;
-    background-image: url(../img/974e19416242ccb6755ce5e4878d4988.jpg);
+.popup_Profile {
+    width: 200px;
+    height: 250px;
+    background-color: var(--white300);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+}
+
+/* popup_Profile_top */
+.popup_Profile_top {
+    height: 130px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_Profile .popup_Profile_top>img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    top: 20px;
-    right: 20px;
+}
+
+.popup_Profile .popup_Profile_top>p {
+    font-size: 1rem;
+}
+
+/* popup_Profile_butm */
+.popup_Profile_butm {
+    padding: 20px;
+    padding-left: 30px;
+}
+
+/* mycode, setting, logout 공통 스타일 */
+.popup_Profile_butm .mycode,
+.popup_Profile_butm .setting,
+.popup_Profile_butm .logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.popup_Profile_butm .mycode p,
+.popup_Profile_butm .setting p,
+.popup_Profile_butm .logout p {
+    font-size: 1rem;
+}
+
+.popup_Profile_butm .mycode img,
+.popup_Profile_butm .setting img,
+.popup_Profile_butm .logout img {
+    width: 10px;
+    height: 10px;
+}
+
+/* 닉네임 스타일 추가 */
+.popup_Profile .popup_Profile_top>p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    margin-left: 10px;
+    color: var(--black);
 }
 
 /* main */
