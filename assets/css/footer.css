@@ -29,6 +29,8 @@
 
 .footer__inner .left span a {
     color: var(--white);
+    cursor: pointer;
+
 }
 
 .footer__inner .right ul li a {
