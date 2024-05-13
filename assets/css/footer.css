@@ -1,6 +1,7 @@
-/* footer */
-#footer  {
+/* footer 여기 부분은 footer.css 부분 붙혀 놓은거라 수정하시면 됩니다.*/
+#footer {
     background-color: var(--black);
+    color: var(--white);
     padding-top: 40px;
 }
 
@@ -19,13 +20,20 @@
     margin-right: 10px;
 }
 
-.footer__inner .left a {
+.footer__inner .left span {
     display: block;
-    /* 세로로 정렬되도록 설정 */
     margin-bottom: 5px;
-    /* 아래쪽 간격 추가 */
+    color: var(--white);
 }
 
+
+.footer__inner .left span a {
+    color: var(--white);
+}
+
+.footer__inner .right ul li a {
+    color: var(--white);
+}
 
 @media (max-width:600px) {
     .footer__inner {

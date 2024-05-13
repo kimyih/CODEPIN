@@ -89,7 +89,9 @@
         <div class="container">
             <div class="footer__inner">
                 <div class="left">
-                    <span>문의 : </span><a href="wlsakf23@gmail.com" class="maill">wlsakf23@gmail.com</a>
+                    <span>문의 : <a href="mailto:wlsakf23@gmail.com" class="maill">wlsakf23@gmail.com</a>,
+                        <a href="mailto:kjw040416@gmail.com" class="maill">kjw040416@gmail.com</a>, <a
+                            href="mailto:liarusen@gmail.com" class="maill">liarusen@gmail.com</a></span>
                     <p>Copyright © WEBS Corp. All Rights Reserved.</p>
                 </div>
                 <div class="right">
@@ -124,27 +126,6 @@
             });
         });
 
-
-        // 설정 팝업
-        const borders = document.querySelectorAll('.border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8, .border9, .border10');
-        const editor = document.getElementById('editor');
-
-        // 각 border 요소에 클릭 이벤트 리스너 추가
-        borders.forEach(border => {
-            border.addEventListener('click', function (event) {
-                // editor의 위치를 클릭한 위치로 설정
-                editor.style.left = event.pageX + 'px';
-                editor.style.top = event.pageY + 'px';
-                editor.style.display = 'block';
-            });
-        });
-
-        // editor 외부를 클릭했을 때 editor를 숨김
-        document.addEventListener('click', function (event) {
-            if (!event.target.closest('.border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8, .border9, .border10')) {
-                editor.style.display = 'none';
-            }
-        });
     </script>
 </body>
 
