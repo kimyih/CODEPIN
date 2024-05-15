@@ -14,10 +14,6 @@
     min-width: 28rem;
 }
 
-/* //feed_contents */
-
-.feed_contents {}
-
 /* //feed_head */
 
 .feed_head {
@@ -26,6 +22,7 @@
 
 .feed_head button:hover {
     background-color: var(--pointColor3);
+    color: var(--white);
 }
 
 .feed_list_container {
@@ -35,6 +32,24 @@
     grid-gap: 1rem;
     justify-content: center;
     display: grid;
+}
+
+/* //feed_write */
+
+.feed_write {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: right;
+    margin-right: 3rem;
+}
+
+.feed_write .feed_wirte_btn {
+    background-color: var(--pointColor3);
+    color: var(--white);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    width: 7.8rem;
+    cursor: pointer;
 }
 
 /* //profile_container */
@@ -51,13 +66,13 @@
     display: flex;
     align-items: center;
     position: absolute;
-    left: 1rem;
     bottom: -1.2rem;
     gap: 1.2rem;
     color: #000;
     font-family: var(--font-montserrat);
     font-weight: 600;
     font-size: 1.6rem;
+    padding: 0 3.2rem;
 }
 
 .profile_profile_container img {
@@ -84,7 +99,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background-color: #fff;
+    background-color: var(--white);
     width: 100%;
     height: auto;
     padding: 1.2rem 3.2rem 2rem;
@@ -102,9 +117,20 @@
 
 /* //feed_desc_img_container */
 
-.feed_desc_img_container {}
+.feed_desc_img_container {
+    position: relative;
+    margin-bottom: 3rem;
+}
 
-.feed_desc_img {
+.desc_line {
+    width: 80%;
+    height: 1px;
+    color: var(--pointColor3);
+    margin: 0 auto;
+}
+
+.feed_desc_img,
+.feed_desc_img img {
     width: 100%;
     aspect-ratio: 3 / 2;
     overflow: hidden;
@@ -114,4 +140,67 @@
     align-items: center;
     transition: all .2s ease 0s;
     border-radius: 2rem;
+    margin-top: 1rem;
+}
+
+.feed_desc_scrap {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    align-items: center;
+}
+
+.feed_desc_scraplink {
+    display: flex;
+    padding: .95rem 1rem .95rem 1.2rem;
+    align-items: center;
+    border-radius: 5.3rem;
+    border: .1rem solid hsla(0, 0%, 90%, .6);
+    background: rgba(103, 103, 103, 0.479);
+    color: var(--white);
+}
+
+.feed_desc_scraplink span {
+    font-size: 1.3rem;
+}
+
+.feed_desc_scraplink:hover {
+    background-color: #78e3cf79;
+    color: var(--white);
+}
+
+/* //feed_pager_main */
+
+.feed_pager_main {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.feed_pager_main>ul {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.feed_pager_main>ul>li {
+    cursor: pointer;
+
+}
+
+.feed_pager_main>ul>li a {
+    margin: 0 1rem;
+    font-family: var(--fontM);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.95rem;
+    text-align: center;
+    color: var(--black700);
+}
+
+.feed_pager_main>ul>li a:active {
+    color: var(--black);
 }
