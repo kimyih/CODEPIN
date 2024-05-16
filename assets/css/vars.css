@@ -38,3 +38,45 @@
         font-size: 14px;
     }
 }
+
+/* My page_info code_Grid */
+@media screen and (min-width: 996px) {
+    .Code_Grid {
+        grid-template-columns: repeat(5, minmax(16.6rem, 27.8rem));
+    }
+}
+
+@media screen and (min-width: 525px) {
+    .Code_Grid {
+        grid-template-columns: repeat(3, minmax(14.4rem, 48rem));
+    }
+}
+
+@media screen and (min-width: 281px) {
+    .Code_Grid {
+        grid-template-columns: repeat(2, minmax(11.55rem, 27.6rem));
+    }
+}
+
+/* //item_edit_Container */
+@media (min-width: 768px) {
+
+    .item_edit_Container {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .item_edit_Container {
+        position: absolute;
+        top: 83%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: .7rem;
+    }
+}
