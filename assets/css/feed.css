@@ -22,6 +22,8 @@ section {
     min-width: 28rem;
 }
 
+
+
 /* //feed_head */
 
 .feed_head {
@@ -44,13 +46,17 @@ section {
 }
 
 /* //feed_write */
+.feed_wirte_container {
+    max-width: 62.2rem;
+    margin: 0px auto;
+}
 
 .feed_write {
     min-height: auto;
-    padding: 0 10rem 0;
     margin-bottom: 1rem;
     display: flex;
     justify-content: right;
+    margin-right: 2rem;
 }
 
 .feed_write .feed_wirte_btn {
@@ -208,6 +214,23 @@ section {
 .feed_pager_main>ul>li {
     cursor: pointer;
 
+}
+
+.feed_pager_main>ul>li>a img.arrow_left {
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(180deg);
+    cursor: pointer;
+    filter: invert(37%) sepia(0) saturate(392%) hue-rotate(185deg) brightness(83%) contrast(86%);
+    opacity: .3;
+}
+
+.feed_pager_main>ul>li>a img.arrow_right {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    filter: invert(37%) sepia(0) saturate(392%) hue-rotate(185deg) brightness(83%) contrast(86%);
+    opacity: .3;
 }
 
 .feed_pager_main>ul>li a {
