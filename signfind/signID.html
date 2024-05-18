@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 찾기</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/signID.css">
+</head>
+
+
+<body>
+    <main class="myidfind">
+        <div class="main__inner" onclick="InputEvent()" onkeydown="InputEvent()">
+            <div class="main_container">
+                <div class="idfind_title">
+                    <h1>내 계정 ID 찾기</h1>
+                </div>
+                <div class="idfind_contents">
+                    <p class="text_guide">내 계정 ID를 복구하려면 이메일을 입력하세요.</p>
+                </div>
+                <div class="idfind_forms">
+                    <form name="findform">
+                        <fieldset role="form">
+                            <legend></legend>
+                            <div class="one_input_container">
+                                <label for="recoveryld">복구용 이메일</label>
+                                <input name="recoveryId" id="recoveryId" type="text" max="100" required="required">
+                                <div class="findform_error_msg" ng-messages="findform_error">
+                                    <div ngmessage="required" class="error_msg">유효한 이메일 주소를 입력해주세요.</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="under_container">
+                    <div class="one_btn_container">
+                        <button class="findid_btn" type="button">계속</button>
+                    </div>
+                    <div class="under_menu">
+                        <ul>
+                            <li><a href="#">로그인 하기</a></li>
+                            <li><a href="#">비밀번호 찾기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

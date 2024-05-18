@@ -218,7 +218,25 @@
                 event.stopPropagation();
             });
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // .Mypage_addItem 클릭 시 팝업 보이기
+            $(".Mypage_addItem").click(function (event) {
+                $(".addboard_outcontainer").show();
+                event.stopPropagation();
+            });
 
+            // 팝업 외부 클릭 시 숨기기
+            $(document).click(function () {
+                $(".addboard_outcontainer").hide();
+            });
+
+            // 팝업 내부 클릭 시 팝업 유지
+            $(".addboard_outcontainer").click(function (event) {
+                event.stopPropagation();
+            });
+        });
     </script>
 </body>
 

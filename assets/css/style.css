@@ -11,6 +11,8 @@
 @import "profile_setting.css";
 @import "mypage.css";
 @import "myboard.css";
+@import "signID.css";
+@import "signPass.css";
 
 /* 섹션 설정 */
 @import "header.css";

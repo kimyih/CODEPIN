@@ -144,3 +144,31 @@
         padding: 2.8rem 0;
     }
 }
+
+
+/* //myidfind */
+@media (min-width: 680px) {
+    .myidfind {
+        flex-grow: 0;
+        margin-bottom: -1px;
+        padding-top: 48px;
+    }
+}
+
+@media (min-width: 680px) {
+    .myidfind .main__inner {
+        background-color: #070707;
+        border-radius: 26px;
+        padding: 60px 72px 48px 72px;
+    }
+}
+
+/* // */
+@media (min-width: 680px) {
+    .idfind_title h1 {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 1.25;
+        margin-bottom: 36px;
+    }
+}
