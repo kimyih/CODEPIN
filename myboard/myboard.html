@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지</title>
+    <title>마이보드</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
@@ -60,21 +60,117 @@
                 <div class="Mypage_info">
                     <div class="Mypage_info_codes">
                         <div class="MyPage_info_items">
-                            <p class="Mypage_count">몇 개의 코드</p>
+                            <p class="Mypage_count">몇 개의 보드</p>
                             <button class="Mypage_addItem">
-                                <img src="./assets/img/icon_cross_grey.webp" alt="">
-                                <span>코드 추가</span>
+                                <img src="/assets/img/icon_cross_grey.webp" alt="">
+                                <span>보드 추가</span>
                             </button>
-                        </div>
-                        <div class="Code_Gird">
-                            <div class="Item_out">
-                                <div class="Item_in">
-                                    <a href="#">
-                                        <div class="Item_square">
-                                            <div class="Item_overlay"></div>
+                            <div class="addboard_outcontainer">
+                                <div class="addboard_container">
+                                    <div class="addboard_popup_container">
+                                        <div class="addItem_popup_top">
+                                            <div class="popup_top_title">새 보드 추가</div>
+                                            <button class="popup_top_close">
+                                                <img src="/assets/img/close_black.webp" alt="">
+                                            </button>
                                         </div>
-                                    </a>
+                                        <!-- //addItem_popup_top -->
+
+                                        <div class="addItem_popup_contents">
+                                            <div class="popup_contents_codename">보드 이름</div>
+                                            <input class="contenst_codename" type="text">
+                                            <p class="addboard_popup_length">0/16</p>
+                                            <div class="container_line"></div>
+                                            <!-- //container_line 프로필 셋팅에서 재활용 -->
+                                            <div class="addboard_popup_private">
+                                                <input type="checkbox" type="checkbox">
+                                                <label for="checkbox">비공개</label>
+                                            </div>
+                                        </div>
+                                        <!--//addItem_popup_contents  -->
+
+                                        <div class="addItem_popup_bottom">
+                                            <button class="addItem_save">
+                                                <span>저장하기</span>
+                                            </button>
+                                        </div>
+                                        <!-- //addItem_popup_bottom -->
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- //MyPage_info_items -->
+
+                        <div class="Code_Grid">
+                            <div class="Myboard_contaienr">
+                                <div class="boardItem">
+                                    <div class="boardItem_square">
+                                        <a href="#">
+                                            <div class="boardItem_squeare_container">
+                                                <div class="boardItem_vertical">
+                                                    <div class="boardItem_overlay"></div>
+                                                    <img src="/assets/img/board_ex1.webp" alt="상품이름">
+                                                </div>
+                                                <div class="boardItem_vertical">
+                                                    <div class="boardItem_horizontal">
+                                                        <div class="boardItem_overlay"></div>
+                                                        <img src="/assets/img/board_ex2.webp" alt="">
+                                                    </div>
+                                                    <div class="boardItem_horizontal">
+                                                        <div class="boardItem_overlay"></div>
+                                                        <img src="/assets/img/board_ex3.webp" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="boardItem_line"></div>
+                                            </div>
+                                            <div class="boardIten_line2"></div>
+                                        </a>
+                                        <button class="boardItem_edit">
+                                            <img src="/assets/img/icon_edit_black.webp" alt="">
+                                        </button>
+                                        <div class="addboard_edit_outcontainer">
+                                            <div class="addboard_edit_container">
+                                                <div class="addboard_popup_container">
+                                                    <div class="addboard_popup_top">
+                                                        <div class="board_popup_top_title">보드 편집</div>
+                                                        <button class="board_popup_top_close">
+                                                            <img src="/assets/img/close_black.webp" alt="">
+                                                        </button>
+                                                    </div>
+                                                    <!-- //addItem_popup_top -->
+
+                                                    <div class="addboard_popup_contents">
+                                                        <div class="board_popup_contents_codename">보드 이름</div>
+                                                        <input class="board_contents_codename" type="text">
+                                                        <p class="addboard_popup_length">0/16</p>
+                                                        <div class="addboard_popup_private">
+                                                            <input type="checkbox" type="checkbox">
+                                                            <label for="checkbox">비공개</label>
+                                                        </div>
+                                                    </div>
+                                                    <!--//addItem_popup_contents  -->
+
+                                                    <div class="addboard_popup_bottom">
+                                                        <div class="board_container_line"></div>
+                                                        <button class="addboard_save">
+                                                            <span>저장하기</span>
+                                                        </button>
+                                                        <button class="addboard_delete">
+                                                            <span>삭제하기</span>
+                                                        </button>
+                                                    </div>
+                                                    <!-- //addItem_popup_bottom -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="boardItem_memo">
+                                        <p class="board_name">보드 제목</p>
+                                        <p class="board_number">몇 개의 아이템</p>
+                                    </div>
+
+                                </div>
+                                <!-- //boardItem -->
                             </div>
                         </div>
                     </div>
@@ -123,27 +219,6 @@
             });
         });
 
-
-        // 설정 팝업
-        const borders = document.querySelectorAll('.border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8, .border9, .border10');
-        const editor = document.getElementById('editor');
-
-        // 각 border 요소에 클릭 이벤트 리스너 추가
-        borders.forEach(border => {
-            border.addEventListener('click', function (event) {
-                // editor의 위치를 클릭한 위치로 설정
-                editor.style.left = event.pageX + 'px';
-                editor.style.top = event.pageY + 'px';
-                editor.style.display = 'block';
-            });
-        });
-
-        // editor 외부를 클릭했을 때 editor를 숨김
-        document.addEventListener('click', function (event) {
-            if (!event.target.closest('.border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8, .border9, .border10')) {
-                editor.style.display = 'none';
-            }
-        });
     </script>
 </body>
 

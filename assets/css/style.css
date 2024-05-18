@@ -9,9 +9,9 @@
 @import "main-Intro.css";
 @import "feed.css";
 @import "profile_setting.css";
-
+@import "mypage.css";
+@import "myboard.css";
 
 /* 섹션 설정 */
 @import "header.css";
 @import "footer.css";
-@import "mypage.css";

@@ -67,6 +67,30 @@
                                 <img src="./assets/img/icon_cross_grey.webp" alt="">
                                 <span>코드 추가</span>
                             </button>
+                            <div class="addItem_outcontainer">
+                                <div class="addItem_modal">
+                                    <div class="addItem_popup">
+                                        <div class="addItem_popup_top">
+                                            <div class="popup_top_title">코드 추가</div>
+                                            <button class="popup_top_close">
+                                                <img src="assets/img/close_black.webp" alt="">
+                                            </button>
+                                        </div>
+                                        <div class="addItem_popup_contents">
+                                            <div class="popup_contents_codename">코드 이름</div>
+                                            <input class="contenst_codename" type="text">
+                                            <input class="popup_contents_text" type="text"></input>
+                                            <div class="container_line"></div>
+                                            <!-- //container_line 프로필 셋팅에서 재활용 -->
+                                        </div>
+                                        <div class="addItem_popup_bottom">
+                                            <button class="addItem_save">
+                                                <span>저장하기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="Code_Grid">
                             <div class="item_out_Container">
@@ -85,6 +109,8 @@
                                         </button>
                                     </div>
                                 </div>
+                                <!-- ..item_container -->
+
                                 <a href="">
                                     <div class="item_gap"></div>
                                     <div class="item_text">
@@ -315,6 +341,28 @@
 
             // 팝업 내부 클릭 시 팝업 유지
             $(".popup_Profile").click(function (event) {
+                event.stopPropagation();
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // .Mypage_addItem 클릭 시 팝업 보이기
+            $(".Mypage_addItem").click(function (event) {
+                $(".addboard_outcontainer").show();
+                event.stopPropagation();
+            });
+
+            // 여기서부터 왜인지 작동이 안됨
+            // 팝업 외부 클릭 시 숨기기
+            $(document).click(function () {
+                $(".addItem_container_modal").hide();
+            });
+
+            // 팝업 내부 클릭 시 팝업 유지
+            $(".addItem_container_modal").click(function (event) {
                 event.stopPropagation();
             });
         });
