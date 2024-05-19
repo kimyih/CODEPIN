@@ -128,6 +128,8 @@
     margin-block-end: 1em;
 }
 
+/* //Mypage_addItem */
+
 .Mypage_addItem {
     gap: 0.5rem;
     width: 8rem;
@@ -152,6 +154,118 @@
     cursor: pointer;
 }
 
+/* //addItem_outcontainer */
+
+.addItem_outcontainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18, 19, 20, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.addItem_modal {
+    width: 40rem;
+}
+
+/* //addItem_popup */
+.addItem_modal .addItem_popup {
+    display: flex;
+    flex-flow: column;
+    background-color: var(--white);
+    justify-content: center;
+}
+
+.addItem_popup_top {
+    width: 100%;
+    height: 6rem;
+    padding: 1.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup_top_title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    margin: 0 auto;
+    color: var(--pointColor3);
+}
+
+.popup_top_close {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.popup_top_close img {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+}
+
+/* //addItem_popup_contents */
+.addItem_popup_contents {
+    padding: 0 3rem;
+}
+
+.popup_contents_codename {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.contenst_codename {
+    width: 100%;
+    height: 50px;
+    border-radius: 1.2rem;
+    border: 0.2rem solid hsla(0, 0%, 90%, .6);
+    background-color: hsla(0, 0%, 90%, .6);
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.popup_contents_text {
+    width: 100%;
+    height: 200px;
+    border: 0.2rem solid hsla(0, 0%, 90%, .6);
+    background-color: hsla(0, 0%, 90%, .6);
+    border-radius: 1.2rem;
+    margin-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* //addItem_popup_bottom */
+.addItem_popup_bottom {
+    padding: 0 3rem;
+}
+
+.addItem_save {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.addItem_save span {
+    font-size: 1.1rem;
+}
+
+.addItem_save:hover {
+    background-color: var(--pointColor3);
+}
+
 /* //Code_Grid */
 
 .Code_Grid {
@@ -164,7 +278,6 @@
     max-width: 144rem;
     width: 100%;
     grid-template-columns: repeat(5, minmax(16.6rem, 27.8rem));
-
 }
 
 .item_out_Container {

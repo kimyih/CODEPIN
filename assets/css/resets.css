@@ -37,7 +37,7 @@ button,
 input,
 table,
 textarea {
-    font-family: var(--fontN), var(--fontG), 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움';
+    font-family: var(--fontM), var(--fontM), 'Montserrat'
 }
 
 /* 링크 초기화 */
