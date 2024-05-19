@@ -54,7 +54,7 @@
             <div class="contetns_wrap">
                 <div class="Mypage_header"></div>
                 <div class="Mypage_tap">
-                    <a href="mypage/mypage.html"><button class="Mypage_code">코드</button></a>
+                    <a href="mypage/mypage.html" class="active"><button class="Mypage_code">코드</button></a>
                     <a href="/myboard/myboard.html"><button class="Mypage_board">보드</button></a>
                     <a href="./feed/feed.html"><button class="Mypage_feed">피드</button></a>
                     <!-- 코드, 보더 변경 버튼 -->
@@ -355,7 +355,6 @@
                 event.stopPropagation();
             });
 
-            // 여기서부터 왜인지 작동이 안됨
             // 팝업 외부 클릭 시 숨기기
             $(document).click(function () {
                 $(".addItem_container_modal").hide();

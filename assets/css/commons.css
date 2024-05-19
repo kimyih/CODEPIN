@@ -93,6 +93,11 @@ body {
     display: inline-block;
 }
 
+/* active */
+.active {
+    background-color: var(--pointColor1);
+}
+
 @media (max-width:800px) {
     .container {
         width: 100%;

@@ -112,11 +112,11 @@
     justify-content: space-between;
 }
 
-.sign__up div .check input {
+.sign__up div .check>input {
     width: 69%;
 }
 
-.sign__up div input {
+.sign__up>div>input {
     width: 100%;
     margin-top: 3px;
     margin-bottom: 20px;

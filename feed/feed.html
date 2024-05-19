@@ -6,6 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        /* 팝업 스타일 */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .popup-header,
+        .popup-footer {
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .popup-body {
+            padding: 20px;
+            position: relative;
+        }
+
+        .popup .close {
+            cursor: pointer;
+            float: right;
+        }
+
+        .popup-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .popup-header p {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            padding-top: 15px;
+        }
+
+        .image-box {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-image: url(../assets/img/board_ex3.webp);
+        }
+
+        .image-box img {
+
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .upload-btn {
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            padding: 5px 10px;
+            background-color: var(--pointColor3);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,9 +138,24 @@
                 </div>
                 <!-- //feed_head -->
                 <div class="feed_wirte_container">
-                    <a class="feed_write" href="">
-                        <button class="feed_wirte_btn">작성하기</button>
+                    <a class="feed_write" href="javascript:void(0)">
+                        <button class="feed_wirte_btn" onclick="openPopup()">작성하기</button>
                     </a>
+                    <!-- 팝업 HTML -->
+                    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+                    <div class="popup" id="popup">
+                        <div class="popup-header">
+                            <img src="../assets/img/974e19416242ccb6755ce5e4878d4988.jpg" alt="유저 이미지">
+                            <p>닉네임</p>
+                            <span class="close" onclick="closePopup()">&times;</span>
+                        </div>
+                        <div class="popup-body">
+                            <div class="image-box" id="imageBox">
+                                <span>코드 썸네일</span>
+                            </div>
+                            <button class="upload-btn" onclick="uploadImage()">업로드</button>
+                        </div>
+                    </div>
                     <div class="feed_list_container">
                         <div>
                             <div class="profile_container">
@@ -84,151 +188,25 @@
                                 <div class="desc_line"></div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- //피드에 있는 글 1 -->
-                    <div>
-                        <div class="profile_container">
-                            <a href="user_profile">
-                                <div class="profile_profile_container">
-                                    <img src="/assets/img/eximg.png" alt="">
-                                    <p class="profie_name">개발자</p>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- //profile_container -->
+                        <!-- 추가 피드 아이템들 -->
 
-                        <div class="feed_desc_container">
-                            <a href="">
-                                <p class="feed_desc_title">
-                                    좋아보이는 코드가 있어서 공유합니다.
-                                    함께 보는건 어떠세요? 굉장히 흥미롭습니다.
-                                </p>
-                            </a>
-                            <div class="feed_desc_img_container">
-                                <a class="feed_desc_img" href="">
-                                    <img src="../assets/img/feedeximg.png" alt="">
-                                </a>
-                                <div class="feed_desc_scrap">
-                                    <a class="feed_desc_scraplink" href="">
-                                        <span>코드 보기</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="desc_line"></div>
-                        </div>
                     </div>
-                    <!-- //피드에 있는 글 2 -->
-                    <div>
-                        <div class="profile_container">
-                            <a href="user_profile">
-                                <div class="profile_profile_container">
-                                    <img src="/assets/img/eximg.png" alt="">
-                                    <p class="profie_name">개발자</p>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- //profile_container -->
-
-                        <div class="feed_desc_container">
-                            <a href="">
-                                <p class="feed_desc_title">
-                                    좋아보이는 코드가 있어서 공유합니다.
-                                    함께 보는건 어떠세요? 굉장히 흥미롭습니다.
-                                </p>
-                            </a>
-                            <div class="feed_desc_img_container">
-                                <a class="feed_desc_img" href="">
-                                    <img src="../assets/img/feedeximg.png" alt="">
-                                </a>
-                                <div class="feed_desc_scrap">
-                                    <a class="feed_desc_scraplink" href="">
-                                        <span>코드 보기</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="desc_line"></div>
-                        </div>
+                    <!-- //feed_list_container -->
+                    <div class="feed_pager_main">
+                        <ul>
+                            <li><a href="#"><img class="arrow_left" src="../assets/img/arrow_right.svg" alt="이전"></a>
+                            </li>
+                            <li><a href="#"><span>1</span></a></li>
+                            <li><a href="#"><span>2</span></a></li>
+                            <li><a href="#"><span>3</span></a></li>
+                            <li><a href="#"><span>4</span></a></li>
+                            <li><a href="#"><span>5</span></a></li>
+                            <li><a href="#"><img class="arrow_right" src="../assets/img/arrow_right.svg" alt="다음"></a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- //피드에 있는 글 3 -->
-                    <div>
-                        <div class="profile_container">
-                            <a href="user_profile">
-                                <div class="profile_profile_container">
-                                    <img src="/assets/img/eximg.png" alt="">
-                                    <p class="profie_name">개발자</p>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- //profile_container -->
-
-                        <div class="feed_desc_container">
-                            <a href="">
-                                <p class="feed_desc_title">
-                                    좋아보이는 코드가 있어서 공유합니다.
-                                    함께 보는건 어떠세요? 굉장히 흥미롭습니다.
-                                </p>
-                            </a>
-                            <div class="feed_desc_img_container">
-                                <a class="feed_desc_img" href="">
-                                    <img src="../assets/img/feedeximg.png" alt="">
-                                </a>
-                                <div class="feed_desc_scrap">
-                                    <a class="feed_desc_scraplink" href="">
-                                        <span>코드 보기</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="desc_line"></div>
-                        </div>
-                    </div>
-                    <!-- //피드에 있는 글 4 -->
-                    <div>
-                        <div class="profile_container">
-                            <a href="user_profile">
-                                <div class="profile_profile_container">
-                                    <img src="/assets/img/eximg.png" alt="">
-                                    <p class="profie_name">개발자</p>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- //profile_container -->
-
-                        <div class="feed_desc_container">
-                            <a href="">
-                                <p class="feed_desc_title">
-                                    좋아보이는 코드가 있어서 공유합니다.
-                                    함께 보는건 어떠세요? 굉장히 흥미롭습니다.
-                                </p>
-                            </a>
-                            <div class="feed_desc_img_container">
-                                <a class="feed_desc_img" href="">
-                                    <img src="../assets/img/feedeximg.png" alt="">
-                                </a>
-                                <div class="feed_desc_scrap">
-                                    <a class="feed_desc_scraplink" href="">
-                                        <span>코드 보기</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="desc_line"></div>
-                        </div>
-                    </div>
-                    <!-- //피드에 있는 글 5 -->
                 </div>
-                <!-- //feed_list_container -->
-                <div class="feed_pager_main">
-                    <ul>
-                        <li><a href="#"><img class="arrow_left" src="../assets/img/arrow_right.svg" alt="이전"></a></li>
-                        <li><a href="#"><span>1</span></a></li>
-                        <li><a href="#"><span>2</span></a></li>
-                        <li><a href="#"><span>3</span></a></li>
-                        <li><a href="#"><span>4</span></a></li>
-                        <li><a href="#"><span>5</span></a></li>
-                        <li><a href="#"><img class="arrow_right" src="../assets/img/arrow_right.svg" alt="다음"></a></li>
-                    </ul>
-                </div>
-            </div>
     </section>
     <footer id="footer" role="contentinfo">
         <div class="container">
@@ -250,6 +228,28 @@
         </div>
     </footer>
     <!-- footer.. -->
+
+    <script>
+        // 팝업 기능을 위한 JavaScript
+        function openPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function uploadImage() {
+            // 이미지 업로드 로직 추가
+            const imageBox = document.getElementById("imageBox");
+            const image = document.createElement("img");
+            image.src = "/path/to/your/image.jpg"; // 업로드된 이미지 경로로 변경
+            imageBox.innerHTML = "";
+            imageBox.appendChild(image);
+        }
+    </script>
 </body>
 
 </html>

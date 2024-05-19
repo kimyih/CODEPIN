@@ -9,27 +9,52 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="left">
-            <textarea placeholder="HTML 입력"></textarea>
-            <textarea placeholder="CSS 입력"></textarea>
-            <textarea placeholder="JavaScript 입력"></textarea>
-        </div>
-        <div class="right">
-            <div class="header_top">
-                <button class="icon-button"><img src="../assets/img/uplod.svg" alt="업로드"></button>
-                <div class="buttons">
-                    <button>사이트 방문</button>
-                    <button>삭제하기</button>
+    <div id="wrap">
+        <div class="container">
+            <div class="left">
+                <textarea placeholder="HTML 입력"></textarea>
+                <textarea placeholder="CSS 입력"></textarea>
+                <textarea placeholder="JavaScript 입력"></textarea>
+            </div>
+            <div class="right">
+                <div class="header_top">
+                    <button class="icon-button"><img src="../assets/img/uplod.svg" alt="업로드"></button>
+                    <div class="buttons">
+                        <button>사이트 방문</button>
+                        <button>삭제하기</button>
+                    </div>
                 </div>
+                <input type="text" class="title" placeholder="사용자 지정 제목">
+                <div class="main_img" id="main_img">
+                    <span>코드를 넣으면 자동으로 사진이 뜨거나 사용자가 사진을 넣을 수 있음 코드의 완성 사진 or 썸네일</span>
+                    <button class="upload-btn" onclick="uploadImage()">업로드</button>
+                </div>
+                <textarea class="note" placeholder="사용자 메모"></textarea>
             </div>
-            <input type="text" class="title" placeholder="사용자 지정 제목">
-            <div class="main_img">
-                코드를 넣으면 자동으로 사진이 뜨거나 사용자가 사진을 넣을 수 있음 코드의 완성 사진 or 썸네일
-            </div>
-            <textarea class="note" placeholder="사용자 메모"></textarea>
         </div>
     </div>
+    <script>
+        function uploadImage() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = function (event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.maxWidth = '100%';
+                    img.style.maxHeight = '100%';
+                    const mainImg = document.getElementById('main_img');
+                    mainImg.innerHTML = '';
+                    mainImg.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            };
+            input.click();
+        }
+    </script>
 </body>
 
 </html>

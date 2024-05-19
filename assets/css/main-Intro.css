@@ -35,7 +35,7 @@
     margin: 10px;
 }
 
-.linkinput input {
+.linkinput>input {
     width: 38%;
     padding: 10px;
     border-radius: 15px;
