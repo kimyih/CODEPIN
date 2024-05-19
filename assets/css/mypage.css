@@ -71,6 +71,11 @@
     justify-content: center;
 }
 
+.Mypage_tap li.active button {
+    background-color: var(--pointColor3);
+    color: var(--white);
+}
+
 .Mypage_code,
 .Mypage_board,
 .Mypage_feed {
