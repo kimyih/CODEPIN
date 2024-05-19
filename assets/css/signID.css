@@ -22,23 +22,24 @@
 .main__inner {
     max-width: 640px;
     margin: 0 auto;
+    border: 1px solid var(--white);
 }
 
 .main_container {
-    background-color: #101010;
+    background-color: #070707;
     border-radius: 30px;
     padding: 40px 40px 40px 40px;
     margin-bottom: 20px;
 }
 
 .main_container .idfind_title h1 {
-    color: #ffff;
+    color: var(--white);
 }
 
 /* //idfind_contents */
 .idfind_contents {
     font-weight: 500;
-    color: #ffff;
+    color: var(--white);
     line-height: 1.5;
     clear: both;
     font-size: 1.1rem;
@@ -85,6 +86,21 @@ fieldset {
     transform-origin: left top;
 }
 
+.one_input_container.focus>label {
+    top: -16px;
+    left: auto;
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--pointColor3);
+}
+
+.one_input_container>input:focus {
+    outline: 0;
+    border-color: var(--pointColor3);
+    border-width: 2px;
+    color: var(--white)
+}
+
 .one_input_container>input {
     display: block;
     width: 100%;
@@ -97,12 +113,12 @@ fieldset {
 }
 
 .findform_error_msg {
-    font-size: 1rme;
+    font-size: 1rem;
     color: #db332a;
     margin-top: 6px;
 }
 
-/* // */
+/* //one_btn_container */
 
 .one_btn_container {
     width: fit-content;
@@ -112,11 +128,11 @@ fieldset {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .findid_btn {
-    background-color: #78E3D0;
+    background-color: var(--pointColor3);
     color: white;
     width: 100%;
     min-width: 200px;
@@ -126,7 +142,7 @@ fieldset {
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 30px;
-    color: #ffff;
+    color: var(--white);
     font-weight: 700;
     font-size: 1rem;
     line-height: 24px;
@@ -153,4 +169,5 @@ fieldset {
 .under_menu li a {
     color: #ffffff5e;
     display: inline-block;
+    text-decoration: underline;
 }
