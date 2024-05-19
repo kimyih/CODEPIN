@@ -229,6 +229,7 @@
     </footer>
     <!-- footer.. -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         // 팝업 기능을 위한 JavaScript
         function openPopup() {
@@ -249,6 +250,45 @@
             imageBox.innerHTML = "";
             imageBox.appendChild(image);
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            // .Profile 클릭 시 팝업 보이기
+            $(".Profile").click(function (event) {
+                $(".popup_Profile").show();
+                event.stopPropagation();
+            });
+
+            // 팝업 외부 클릭 시 숨기기
+            $(document).click(function () {
+                $(".popup_Profile").hide();
+            });
+
+            // 팝업 내부 클릭 시 팝업 유지
+            $(".popup_Profile").click(function (event) {
+                event.stopPropagation();
+            });
+
+            // .setting 클릭 시 링크 이동
+            $(".setting").click(function () {
+                window.location.href = "../Profile_setting/profile_setting.html";
+            });
+
+            // .mycode 클릭 시 링크 이동
+            $(".mycode").click(function () {
+                window.location.href = "../index.html";
+            });
+
+            // .mycode 클릭 시 링크 이동
+            $(".mycode").click(function () {
+                window.location.href = "../index.html";
+            });
+
+            // .logout 클릭 시 링크 이동
+            $(".logout").click(function () {
+                window.location.href = "/index2.html";
+            });
+        });
     </script>
 </body>
 

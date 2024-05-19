@@ -217,27 +217,45 @@
             $(".popup_Profile").click(function (event) {
                 event.stopPropagation();
             });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            // .Mypage_addItem 클릭 시 팝업 보이기
-            $(".Mypage_addItem").click(function (event) {
-                $(".addboard_outcontainer").show();
+
+            // .setting 클릭 시 링크 이동
+            $(".setting").click(function () {
+                window.location.href = "../Profile_setting/profile_setting.html";
+            });
+
+            // .boardItem_edit 클릭 시 팝업 보이기
+            $(".boardItem_edit").click(function (event) {
+                $(".addboard_edit_outcontainer").show();
                 event.stopPropagation();
             });
 
             // 팝업 외부 클릭 시 숨기기
             $(document).click(function () {
-                $(".addboard_outcontainer").hide();
+                $(".addboard_edit_outcontainer").hide();
             });
 
             // 팝업 내부 클릭 시 팝업 유지
-            $(".addboard_outcontainer").click(function (event) {
+            $(".addboard_edit_outcontainer .addboard_popup_container").click(function (event) {
                 event.stopPropagation();
+            });
+
+            // 팝업의 닫기 버튼 클릭 시 숨기기
+            $(".popup_top_close, .board_popup_top_close").click(function () {
+                $(".addboard_edit_outcontainer").hide();
+            });
+
+            // .mycode 클릭 시 링크 이동
+            $(".mycode").click(function () {
+                window.location.href = "../index.html";
+            });
+
+            // .logout 클릭 시 링크 이동
+            $(".logout").click(function () {
+                window.location.href = "/index2.html";
             });
         });
     </script>
+
 </body>
 
 </html>

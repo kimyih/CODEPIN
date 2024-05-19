@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .item_popup {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 10px;
+        }
+
+        .item_popup .item_popup_button {
+            display: block;
+            padding: 5px 10px;
+            margin: 5px 0;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
@@ -81,7 +106,6 @@
                                             <input class="contenst_codename" type="text">
                                             <input class="popup_contents_text" type="text"></input>
                                             <div class="container_line"></div>
-                                            <!-- //container_line 프로필 셋팅에서 재활용 -->
                                         </div>
                                         <div class="addItem_popup_bottom">
                                             <button class="addItem_save">
@@ -93,6 +117,7 @@
                             </div>
                         </div>
                         <div class="Code_Grid">
+                            <!-- 기존 아이템들 -->
                             <div class="item_out_Container">
                                 <div class="item_container">
                                     <a href="#">
@@ -101,33 +126,10 @@
                                             <div class="item_overlay"></div>
                                         </div>
                                     </a>
-                                    <div class="item_edit_Container">
-                                        <button class="item_editButton_Container">
-                                            <div class="item_edit">
-                                                <img src="/assets/img/icon_dots.webp" alt="">
-                                            </div>
-                                        </button>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
                                     </div>
-                                </div>
-                                <!-- ..item_container -->
-
-                                <a href="">
-                                    <div class="item_gap"></div>
-                                    <div class="item_text">
-                                        <p class="item_name">이곳은 제목칸입니다</p>
-                                        <p class="item_memo">여긴 메모</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- 아이템 1개 -->
-                            <div class="item_out_Container">
-                                <div class="item_container">
-                                    <a href="#">
-                                        <div class="item_square">
-                                            <img src="./assets/img/contents.test.png" alt="">
-                                            <div class="item_overlay"></div>
-                                        </div>
-                                    </a>
                                     <div class="item_edit_Container">
                                         <button class="item_editButton_Container">
                                             <div class="item_edit">
@@ -144,7 +146,8 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 아이템 1개 -->
+                            <!-- 아이템 1개 반복 -->
+                            <!-- 추가된 아이템 8개 -->
                             <div class="item_out_Container">
                                 <div class="item_container">
                                     <a href="#">
@@ -153,6 +156,10 @@
                                             <div class="item_overlay"></div>
                                         </div>
                                     </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
                                     <div class="item_edit_Container">
                                         <button class="item_editButton_Container">
                                             <div class="item_edit">
@@ -169,7 +176,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 아이템 1개 -->
+                            <!-- 아이템 2 -->
                             <div class="item_out_Container">
                                 <div class="item_container">
                                     <a href="#">
@@ -178,6 +185,10 @@
                                             <div class="item_overlay"></div>
                                         </div>
                                     </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
                                     <div class="item_edit_Container">
                                         <button class="item_editButton_Container">
                                             <div class="item_edit">
@@ -194,7 +205,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 아이템 1개 -->
+                            <!-- 아이템 3 -->
                             <div class="item_out_Container">
                                 <div class="item_container">
                                     <a href="#">
@@ -203,6 +214,10 @@
                                             <div class="item_overlay"></div>
                                         </div>
                                     </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
                                     <div class="item_edit_Container">
                                         <button class="item_editButton_Container">
                                             <div class="item_edit">
@@ -219,7 +234,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 아이템 1개 -->
+                            <!-- 아이템 4 -->
                             <div class="item_out_Container">
                                 <div class="item_container">
                                     <a href="#">
@@ -228,6 +243,10 @@
                                             <div class="item_overlay"></div>
                                         </div>
                                     </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
                                     <div class="item_edit_Container">
                                         <button class="item_editButton_Container">
                                             <div class="item_edit">
@@ -244,7 +263,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 아이템 1개 -->
+                            <!-- 아이템 5 -->
                             <div class="item_out_Container">
                                 <div class="item_container">
                                     <a href="#">
@@ -253,6 +272,10 @@
                                             <div class="item_overlay"></div>
                                         </div>
                                     </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
                                     <div class="item_edit_Container">
                                         <button class="item_editButton_Container">
                                             <div class="item_edit">
@@ -269,7 +292,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 아이템 1개 -->
+                            <!-- 아이템 6 -->
                             <div class="item_out_Container">
                                 <div class="item_container">
                                     <a href="#">
@@ -278,6 +301,10 @@
                                             <div class="item_overlay"></div>
                                         </div>
                                     </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
                                     <div class="item_edit_Container">
                                         <button class="item_editButton_Container">
                                             <div class="item_edit">
@@ -294,8 +321,65 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 아이템 1개 -->
-
+                            <!-- 아이템 7 -->
+                            <div class="item_out_Container">
+                                <div class="item_container">
+                                    <a href="#">
+                                        <div class="item_square">
+                                            <img src="./assets/img/contents.test.png" alt="">
+                                            <div class="item_overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
+                                    <div class="item_edit_Container">
+                                        <button class="item_editButton_Container">
+                                            <div class="item_edit">
+                                                <img src="/assets/img/icon_dots.webp" alt="">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="">
+                                    <div class="item_gap"></div>
+                                    <div class="item_text">
+                                        <p class="item_name">이곳은 제목칸입니다</p>
+                                        <p class="item_memo">여긴 메모</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 아이템 8 -->
+                            <div class="item_out_Container">
+                                <div class="item_container">
+                                    <a href="#">
+                                        <div class="item_square">
+                                            <img src="./assets/img/contents.test.png" alt="">
+                                            <div class="item_overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="item_popup">
+                                        <button class="item_popup_button">편집</button>
+                                        <button class="item_popup_button">코드 삭제</button>
+                                    </div>
+                                    <div class="item_edit_Container">
+                                        <button class="item_editButton_Container">
+                                            <div class="item_edit">
+                                                <img src="/assets/img/icon_dots.webp" alt="">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="">
+                                    <div class="item_gap"></div>
+                                    <div class="item_text">
+                                        <p class="item_name">이곳은 제목칸입니다</p>
+                                        <p class="item_memo">여긴 메모</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 아이템 9 -->
                         </div>
                     </div>
                 </div>
@@ -337,35 +421,43 @@
             // 팝업 외부 클릭 시 숨기기
             $(document).click(function () {
                 $(".popup_Profile").hide();
+                $(".item_popup").hide(); // 모든 item_popup을 숨깁니다.
             });
 
             // 팝업 내부 클릭 시 팝업 유지
             $(".popup_Profile").click(function (event) {
                 event.stopPropagation();
             });
-        });
 
-    </script>
+            // .setting 클릭 시 링크 이동
+            $(".setting").click(function () {
+                window.location.href = "Profile_setting/profile_setting.html";
+            });
 
-    <script>
-        $(document).ready(function () {
-            // .Mypage_addItem 클릭 시 팝업 보이기
-            $(".Mypage_addItem").click(function (event) {
-                $(".addboard_outcontainer").show();
+            // .Mypage_addItem 클릭 시 링크 이동
+            $(".Mypage_addItem").click(function () {
+                window.location.href = "mypage/item.html";
+            });
+
+            // .logout 클릭 시 링크 이동
+            $(".logout").click(function () {
+                window.location.href = "/index2.html";
+            });
+
+            // .item_overlay 클릭 시 item_popup 보이기
+            $(".item_overlay").click(function (event) {
+                event.preventDefault(); // 기본 동작을 막습니다.
+                $(".item_popup").hide(); // 모든 item_popup을 숨깁니다.
+                var popup = $(this).closest('.item_container').find('.item_popup');
+                popup.toggle();
                 event.stopPropagation();
             });
 
-            // 팝업 외부 클릭 시 숨기기
-            $(document).click(function () {
-                $(".addItem_container_modal").hide();
-            });
-
-            // 팝업 내부 클릭 시 팝업 유지
-            $(".addItem_container_modal").click(function (event) {
+            // item_popup 내부 클릭 시 팝업 유지
+            $(".item_popup").click(function (event) {
                 event.stopPropagation();
             });
         });
-
     </script>
 </body>
 

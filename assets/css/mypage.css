@@ -317,6 +317,11 @@
     background-color: rgba(0, 0, 0, .05);
 }
 
+.item_square .item_overlay:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
 /* //item_edit_Container */
 .item_edit_Container {
     position: relative;

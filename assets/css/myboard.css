@@ -110,6 +110,11 @@
     color: transparent;
 }
 
+.boardItem_squeare_container:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
 /* //boardItem_horizontal */
 .boardItem_horizontal {
     width: 100%;
