@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.left {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.left textarea {
+    background-color: var(--black300);
+    border: 1px solid #555;
+    color: #d3d3d3;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    height: 280px;
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+/* 코드 박스 스크롤바 */
+.left textarea::-webkit-scrollbar {
+    width: 12px;
+}
+
+.left textarea::-webkit-scrollbar-track {
+    background: var(--black100);
+    border-radius: 10px;
+}
+
+.left textarea::-webkit-scrollbar-thumb {
+    background: var(--pointColor3);
+    border: 3px solid var(--black100);
+}
+
+.left textarea::-webkit-scrollbar-thumb:hover {
+    background: var(--pointColor3);
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.header_top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: var(--black300);
+    border-radius: 10px;
+}
+
+.header_top button {
+    background-color: var(--pointColor3);
+    border: none;
+    color: var(--black);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.header_top button:last-child {
+    background-color: var(--pointColor3);
+    color: var(--black);
+}
+
+.title {
+    background-color: var(--black300);
+    border: none;
+    color: var(--white400);
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.main_img {
+    flex: 1;
+    background-color: var(--black300);
+    color: var(--white400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.note {
+    background-color: var(--black300);
+    border: none;
+    color: var(--white400);
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+/* 메모 스크롤바 */
+.right textarea::-webkit-scrollbar {
+    width: 12px;
+}
+
+.right textarea::-webkit-scrollbar-track {
+    background: var(--black100);
+    border-radius: 10px;
+}
+
+.right textarea::-webkit-scrollbar-thumb {
+    background: var(--pointColor3);
+    border: 3px solid var(--black100);
+}
+
+.right textarea::-webkit-scrollbar-thumb:hover {
+    background: var(--black300);
+}
