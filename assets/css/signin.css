@@ -31,6 +31,10 @@ p {
     margin: 20px 0 30px;
 }
 
+li {
+    list-style: none;
+}
+
 span {
     font-size: 16px;
 }
@@ -39,7 +43,7 @@ a {
     color: #333;
     font-size: 16px;
     text-decoration: none;
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 a:hover {
@@ -73,6 +77,11 @@ a:hover {
     height: 100%;
     justify-content: center;
     text-align: center;
+}
+
+.form-container form>.ID_PASS_find:last-child {
+    height: 20px;
+    border-right: 1px solid #94929274;
 }
 
 .required {
@@ -160,6 +169,7 @@ button.ghost:hover {
     opacity: 0;
 }
 
+
 /* //overlay */
 .overlay-container {
     position: absolute;
@@ -171,6 +181,8 @@ button.ghost:hover {
     transition: transform .6s ease-in-out;
     z-index: 100;
 }
+
+
 
 .overlay {
     background: linear-gradient(to right, #000000, #090909) no-repeat 0 0 / cover;

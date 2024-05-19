@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
     margin: 0;
 }
@@ -6,6 +8,7 @@ body {
     display: flex;
     height: 100vh;
     align-items: stretch;
+    gap: 2px;
 }
 
 .left {
@@ -20,7 +23,7 @@ body {
 }
 
 .left textarea {
-    background-color: var(--black300);
+    background-color: var(--white400);
     border: 1px solid #555;
     color: #d3d3d3;
     padding: 15px;
@@ -65,7 +68,7 @@ body {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    background-color: var(--black300);
+    background-color: var(--white100);
     border-radius: 10px;
 }
 
@@ -84,7 +87,7 @@ body {
 }
 
 .title {
-    background-color: var(--black300);
+    background-color: var(--white100);
     border: none;
     color: var(--white400);
     padding: 20px;
@@ -98,7 +101,7 @@ body {
 
 .main_img {
     flex: 1;
-    background-color: var(--black300);
+    background-color: var(--white100);
     color: var(--white400);
     display: flex;
     align-items: center;
@@ -109,7 +112,7 @@ body {
 }
 
 .note {
-    background-color: var(--black300);
+    background-color: var(--white100);
     border: none;
     color: var(--white400);
     padding: 20px;

@@ -38,7 +38,6 @@
     border-radius: 20%;
 }
 
-
 /* .content_wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,7 +46,6 @@
 } */
 
 /* contents */
-
 #contents {
     padding-bottom: 10.8rem;
     box-sizing: inherit;
@@ -61,12 +59,10 @@
     width: 100%;
 }
 
-
-/* //Mypage  */
+/* //Mypage */
 .Mypage_header {
     padding: 4.2rem 3.2rem 2rem;
 }
-
 
 .Mypage_tap {
     gap: 2.4rem;
@@ -129,7 +125,6 @@
 }
 
 /* //Mypage_addItem */
-
 .Mypage_addItem {
     gap: 0.5rem;
     width: 8rem;
@@ -155,7 +150,6 @@
 }
 
 /* //addItem_outcontainer */
-
 .addItem_outcontainer {
     width: 100vw;
     height: 100vh;
@@ -267,7 +261,6 @@
 }
 
 /* //Code_Grid */
-
 .Code_Grid {
     display: grid;
     justify-content: center;
@@ -289,7 +282,6 @@
 .item_container {
     position: relative;
 }
-
 
 /* //item_square */
 .item_square {
@@ -349,7 +341,6 @@
 }
 
 /* //item_gap */
-
 .item_gap {
     height: 0.6rem;
 }
@@ -357,6 +348,19 @@
 .item_text {
     padding: 0.4rem;
     overflow: hidden;
+}
+
+/* 편집창 (수정 예정) */
+.editor {
+    position: absolute;
+    width: 73px;
+    height: 50px;
+    left: 10%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    display: none;
 }
 
 .item_text .item_memo,
