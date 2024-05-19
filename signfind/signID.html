@@ -54,7 +54,8 @@
                             <legend></legend>
                             <div class="one_input_container">
                                 <label for="recoveryld">복구용 이메일</label>
-                                <input name="recoveryId" id="recoveryId" type="text" max="100" required="required">
+                                <input name="recoveryId" id="recoveryId" type="text" maxlength="100" autocomplete="off"
+                                    required="required">
                                 <div class="findform_error_msg" ng-messages="findform_error">
                                     <div ngmessage="required" class="error_msg">유효한 이메일 주소를 입력해주세요.</div>
                                 </div>
@@ -64,7 +65,7 @@
                 </div>
                 <div class="under_container">
                     <div class="one_btn_container">
-                        <button class="findid_btn" type="button">계속</button>
+                        <button class="findid_btn" type="button" disabled="disabled">계속</button>
                     </div>
                     <div class="under_menu">
                         <ul>
