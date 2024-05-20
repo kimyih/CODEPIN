@@ -107,7 +107,7 @@ a:hover {
     cursor: pointer;
 }
 
-.form-container>input {
+.form-container input {
     background: #eee;
     border: none;
     padding: 12px 15px;

@@ -30,7 +30,7 @@
     left: 40px;
 }
 
-.sign__menu>div {
+.sign__menu div {
     margin-right: 20px;
     font-size: 1.8rem;
     font-family: var(--fontL);
@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-.sign__menu>div:active {
+.sign__menu div:active {
     margin-right: 20px;
     font-size: 1.8rem;
     font-family: var(--fontL);
@@ -112,7 +112,7 @@
     justify-content: space-between;
 }
 
-.sign__up div .check>input {
+.sign__up div .check input {
     width: 69%;
 }
 
