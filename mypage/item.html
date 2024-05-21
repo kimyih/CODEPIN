@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iteml</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <style>
-        body {
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body>
@@ -42,13 +37,13 @@
     </header>
     <!-- header -->
     <div id="wrap">
-        <div class="container">
-            <div class="left">
+        <div class="Item_container">
+            <div class="Item_left">
                 <textarea placeholder="HTML 입력"></textarea>
                 <textarea placeholder="CSS 입력"></textarea>
                 <textarea placeholder="JavaScript 입력"></textarea>
             </div>
-            <div class="right">
+            <div class="Item_right">
                 <div class="header_top">
                     <button class="icon-button"><img src="../assets/img/uplod.svg" alt="업로드"></button>
                     <div class="buttons">
@@ -65,26 +60,71 @@
             </div>
         </div>
     </div>
-    <footer id="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__inner">
+    <footer id="footer" role="conentinfo">
+        <div class="footer_container">
+            <div class="footer__Inner">
                 <div class="left">
-                    <span>문의 : <a href="mailto:wlsakf23@gmail.com" class="maill">wlsakf23@gmail.com</a>,
-                        <a href="mailto:kjw040416@gmail.com" class="maill">kjw040416@gmail.com</a>, <a
-                            href="mailto:liarusen@gmail.com" class="maill">liarusen@gmail.com</a></span>
-                    <p>Copyright © WEBS Corp. All Rights Reserved.</p>
+                    <ul>
+                        <li>고객센터
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li>팀원
+                            <ul>
+                                <li>김이현</li>
+                                <li>김진우</li>
+                                <li>최선화</li>
+                            </ul>
+                        </li>
+                        <li>
+                            문의 이메일
+                            <ul>
+                                <li><a href="mailto:wlsakf23@gmail.com">wlsakf23@gmail.com</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="right">
+                    <div class="sns">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="blind">페이스북</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="blind">페이스북</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="blind">페이스북</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="left_bot">
+                    <p class="copy">COPYRIGHT © WayRunMeaning. All Rights Reserved.</p>
+                </div>
+                <div class="right_bot">
                     <ul>
-                        <li><a href="https://github.com/kimyih">김이현</a></li>
-                        <li><a href="https://github.com/KIMJW04">김진우</a></li>
-                        <li><a href="https://github.com/sunhew">최선화</a></li>
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- footer -->
     <script>
         function uploadImage() {
             const input = document.createElement('input');
