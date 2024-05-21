@@ -3,7 +3,8 @@
     width: 100%;
     height: 64px;
     position: fixed;
-    background-color: #f0f0f0d0;
+    top: 0;
+    background-color: #686868d0;
     display: flex;
     justify-content: flex-start;
     align-items: center;

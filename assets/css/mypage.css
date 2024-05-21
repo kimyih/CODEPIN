@@ -324,16 +324,14 @@
 
 /* //item_edit_Container */
 .item_edit_Container {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    top: 80%;
     width: 100%;
     height: auto;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: flex-end;
-    gap: 0.7rem;
+    gap: 12px;
 }
 
 .item_editButton_Container {
@@ -342,71 +340,77 @@
 
 
 .item_edit {
-    position: absolute;
-    bottom: .8rem;
-    right: .8rem;
-    width: 2.8rem;
-    height: 2.8rem;
+    position: static;
+    bottom: 13px;
+    right: 13px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: hsla(0, 0%, 100%, .8);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .item_edit img {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 25px;
+    height: 25px;
     color: transparent;
 }
 
 .ItemEditModal_container {
-    position: absolute;
     background-color: transparent;
-    width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     overflow: visible;
-    z-index: 999;
+    display: none;
+
 }
 
 .ItemEditModal_menu {
-    position: relative;
-    width: 12.8rem;
-    height: 12.4rem;
-    padding: 0.8rem;
+    width: 160px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 0.4rem;
-    border-radius: 1.2rem;
+    gap: 6px;
+    border-radius: 20px;
     box-shadow: 0 0.4rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
 }
 
 .ItemEditModal_Item {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 11.2rem;
-    height: 3.4rem;
-    padding: 0.8rem;
-    border-radius: 0.8rem;
-    gap: 0.8rem;
+    width: 100%;
+    height: 54px;
+    padding: 12px;
+    border-radius: 12px;
+    gap: 12px;
     background-color: var(--white);
+    cursor: pointer;
+}
+
+
+.ItemEditModal_Item:hover {
+    background-color: #acacac;
+    color: var(--white);
 }
 
 .ItemEditModal_Item img {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 25px;
+    height: 25px;
 }
 
 .ItemEditModal_Item p {
-    font-size: 1.5rem;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 2.2rem;
+    line-height: 36px
 }
 
 /* //item_gap */
@@ -419,22 +423,16 @@
     overflow: hidden;
 }
 
-/* 편집창 (수정 예정) */
-/* .editor {
-    position: absolute;
-    width: 73px;
-    height: 50px;
-    left: 10%;
-    top: 10%;
-    transform: translate(-50%, -50%);
-    background-color: var(--white);
-    border: 1px solid #ccc;
-    display: none;
-} */
-
-.item_text .item_memo,
 .item_text .item_name {
-    font-size: 1.2rem;
+    font-size: 20px;
+    font-family: var(--fontM);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item_text .item_memo {
+    font-size: 16px;
     font-family: var(--fontM);
     white-space: nowrap;
     overflow: hidden;

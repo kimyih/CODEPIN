@@ -223,7 +223,7 @@
                 window.location.href = "../Profile_setting/profile_setting.html";
             });
 
-            // .boardItem_edit 클릭 시 팝업 보이기
+            // .boardItem_edit (보드칸 안에 아이콘) 클릭시 팝업창 띄우기
             $(".boardItem_edit").click(function (event) {
                 $(".addboard_edit_outcontainer").show();
                 event.stopPropagation();
@@ -235,13 +235,36 @@
             });
 
             // 팝업 내부 클릭 시 팝업 유지
-            $(".addboard_edit_outcontainer .addboard_popup_container").click(function (event) {
+            $(".addboard_edit_outcontainer").click(function (event) {
+                event.stopPropagation();
+            });
+
+            // 팝업의 닫기 버튼 클릭 시 숨기기
+            $(".board_popup_top_close").click(function () {
+                $(".addboard_edit_outcontainer").hide();
+            });
+
+
+
+            // .Mypage_addItem (보드추가 창) 클릭시 팝업창 띄우기
+            $(".Mypage_addItem").click(function (event) {
+                $(".addboard_outcontainer").show();
+                event.stopPropagation();
+            });
+
+            // 팝업 외부 클릭 시 숨기기
+            $(document).click(function () {
+                $(".addboard_outcontainer").hide();
+            });
+
+            // 팝업 내부 클릭 시 팝업 유지
+            $(".addboard_outcontainer").click(function (event) {
                 event.stopPropagation();
             });
 
             // 팝업의 닫기 버튼 클릭 시 숨기기
             $(".popup_top_close, .board_popup_top_close").click(function () {
-                $(".addboard_edit_outcontainer").hide();
+                $(".addboard_outcontainer").hide();
             });
 
             // .mycode 클릭 시 링크 이동
