@@ -324,12 +324,22 @@
 
 /* //item_edit_Container */
 .item_edit_Container {
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 0.7rem;
 }
+
+.item_editButton_Container {
+    padding-right: 5%;
+}
+
 
 .item_edit {
     position: absolute;
@@ -350,6 +360,55 @@
     color: transparent;
 }
 
+.ItemEditModal_container {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: visible;
+    z-index: 999;
+}
+
+.ItemEditModal_menu {
+    position: relative;
+    width: 12.8rem;
+    height: 12.4rem;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.4rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.ItemEditModal_Item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 11.2rem;
+    height: 3.4rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    gap: 0.8rem;
+    background-color: var(--white);
+}
+
+.ItemEditModal_Item img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.ItemEditModal_Item p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+}
+
 /* //item_gap */
 .item_gap {
     height: 0.6rem;
@@ -361,7 +420,7 @@
 }
 
 /* 편집창 (수정 예정) */
-.editor {
+/* .editor {
     position: absolute;
     width: 73px;
     height: 50px;
@@ -371,7 +430,7 @@
     background-color: var(--white);
     border: 1px solid #ccc;
     display: none;
-}
+} */
 
 .item_text .item_memo,
 .item_text .item_name {
