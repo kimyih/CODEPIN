@@ -1,5 +1,5 @@
 #footer {
-    min-height: 250px;
+    min-height: 350px;
     border-top: 1px solid var(--white);
     margin-top: 3rem;
 }
@@ -18,7 +18,7 @@
 }
 
 .footer__Inner {
-    padding: 1.2rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
